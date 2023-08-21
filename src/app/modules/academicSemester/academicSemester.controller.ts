@@ -5,6 +5,7 @@ import catchAsync from '../../../shared/catchAsync';
 import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
 import { AcademicSemesterService } from './academicSemester.service';
+import { AcademicSemesterFilterAbleFileds } from './academicSemeter.contants';
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   const result = await AcademicSemesterService.insertIntoDB(req.body);
@@ -17,12 +18,7 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
-  const filters = pick(req.query, [
-    'searchTerm',
-    'code',
-    'startMonth',
-    'endMonth',
-  ]);
+  const filters = pick(req.query, AcademicSemesterFilterAbleFileds);
   const options = pick(req.query, ['limit', 'page', 'sortBy', 'sortOrder']);
 
   const result = await AcademicSemesterService.getAllFromDB(filters, options);
