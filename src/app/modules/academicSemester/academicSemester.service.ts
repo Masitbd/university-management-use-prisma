@@ -1,8 +1,9 @@
-import { AcademicSemester, PrismaClient } from '@prisma/client';
+import { AcademicSemester, Prisma, PrismaClient } from '@prisma/client';
 import { paginationHelpers } from './../../../helpers/paginationHelper';
 import { IGenericResponse } from './../../../interfaces/common';
 import { IPaginationOptions } from './../../../interfaces/pagination';
 import { IAcademicSemeterFilterRequest } from './academicSemester.interface';
+import { AcademicSemesterSearchAbleFields } from './academicSemeter.contants';
 
 const prisma = new PrismaClient();
 
@@ -23,23 +24,34 @@ const getAllFromDB = async (
   const { page, limit, skip } = paginationHelpers.calculatePagination(options);
   const { searchTerm, ...filterData } = filters;
 
+  const andConditons = [];
+
+  if (searchTerm) {
+    andConditons.push({
+      OR: AcademicSemesterSearchAbleFields.map(field => ({
+        [field]: {
+          contains: searchTerm,
+          mode: 'insensitive',
+        },
+      })),
+    });
+  }
+
+  if (Object.keys(filterData).length > 0) {
+    andConditons.push({
+      AND: Object.keys(filterData).map(key => ({
+        [key]: {
+          equals: (filterData as any)[key],
+        },
+      })),
+    });
+  }
+
+  const whereConditons: Prisma.AcademicSemesterWhereInput =
+    andConditons.length > 0 ? { AND: andConditons } : {};
+
   const result = await prisma.academicSemester.findMany({
-    where: {
-      OR: [
-        {
-          title: {
-            contains: searchTerm,
-            mode: 'insensitive',
-          },
-        },
-        {
-          code: {
-            contains: searchTerm,
-            mode: 'insensitive',
-          },
-        },
-      ],
-    },
+    where: whereConditons,
     skip,
     take: limit,
   });
