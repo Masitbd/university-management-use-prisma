@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/.f4f5c38b9ed1c9ff9f63111728ec48bc1d9df39e-audit.json",
+    "files": [
+        {
+            "date": 1692560140366,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-20-08-21-error.log",
+            "hash": "966be76c1b7141f151f766dfe36bcd7e2b8f0365976052e7c62a59e08b3fe279"
+        },
+        {
+            "date": 1692610076751,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-21-08-11-error.log",
+            "hash": "3519eaece4d499f002065e578f953c717197fd8f1ceca4d1758064e41e4810f6"
+        },
+        {
+            "date": 1692612014433,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-21-08-12-error.log",
+            "hash": "51ef840ef3a1fb9747ab69f386436032a6faa46444d905544409563fd928b5da"
+        }
+    ],
+    "hashType": "sha256"
+}
