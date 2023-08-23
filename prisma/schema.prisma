@@ -43,7 +43,7 @@ model AcademicDepartment {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  AcademicFaculty  AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
+  academicFaculty  AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
   academicFacultyId String
 
   students Student[]

@@ -54,6 +54,21 @@
             "date": 1692640826282,
             "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/successes/phu-2023-21-08-20-success.log",
             "hash": "25a5194d178198fefeadc92b30c5edec31816e1582721dabbdc7ecb00319be85"
+        },
+        {
+            "date": 1692793892500,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/successes/phu-2023-23-08-14-success.log",
+            "hash": "d7b1c38d9e4f4d5358dae5b483ac850def12b698dab128d353007e9c8da2ae52"
+        },
+        {
+            "date": 1692796254528,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/successes/phu-2023-23-08-15-success.log",
+            "hash": "4cee65437ed6156adde9a133d5f7f22aec16c96f882f6e1974cbfd2dba00426d"
+        },
+        {
+            "date": 1692804661363,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/successes/phu-2023-23-08-17-success.log",
+            "hash": "0d1cbd53664c9ce82a17cfeaa7c3b804f35781ceab987dcdec0a2d801cf086c8"
         }
     ],
     "hashType": "sha256"
