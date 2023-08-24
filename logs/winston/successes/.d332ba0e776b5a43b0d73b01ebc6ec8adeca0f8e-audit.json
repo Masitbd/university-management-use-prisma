@@ -99,6 +99,11 @@
             "date": 1692878873131,
             "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/successes/phu-2023-24-08-14-success.log",
             "hash": "4377e8351ce7b14a9bdf020acbd98b303bc5db7920403c1630c3b503824abf21"
+        },
+        {
+            "date": 1692882106712,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/successes/phu-2023-24-08-15-success.log",
+            "hash": "bfdcbe5b0f8e0c4aa65551cea27518e819c8972769ff8cc861a4d215b1435b31"
         }
     ],
     "hashType": "sha256"
