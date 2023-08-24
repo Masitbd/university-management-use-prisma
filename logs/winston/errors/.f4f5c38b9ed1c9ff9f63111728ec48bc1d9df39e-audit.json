@@ -89,6 +89,11 @@
             "date": 1692872487337,
             "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-24-08-12-error.log",
             "hash": "8dcf4750b798929a2f79ffcc3a9ed201fc56770dc60bcec37081aa8de7667e75"
+        },
+        {
+            "date": 1692875596990,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-24-08-13-error.log",
+            "hash": "e0c37a2a51c3d31e908b4f9f98f3f2a6af52110eb41a4df9410265608497ee9e"
         }
     ],
     "hashType": "sha256"
