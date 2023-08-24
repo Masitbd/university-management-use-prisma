@@ -1,5 +1,10 @@
-import { Building } from '@prisma/client';
+import { Building, Prisma } from '@prisma/client';
+import { paginationHelpers } from '../../../helpers/paginationHelper';
+import { IGenericResponse } from '../../../interfaces/common';
+import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
+import { buildingSearchAbleFields } from './building.constants';
+import { IBuildingRequest } from './building.interface';
 
 const insertIntoDB = async (data: Building): Promise<Building> => {
   const result = await prisma.building.create({
@@ -8,4 +13,50 @@ const insertIntoDB = async (data: Building): Promise<Building> => {
   return result;
 };
 
-export const BuildingService = { insertIntoDB };
+const getAllFromDB = async (
+  filters: IBuildingRequest,
+  options: IPaginationOptions
+): Promise<IGenericResponse<Building[]>> => {
+  const { page, limit, skip } = paginationHelpers.calculatePagination(options);
+  const { searchTerm } = filters;
+
+  const andConditons = [];
+
+  if (searchTerm) {
+    andConditons.push({
+      OR: buildingSearchAbleFields.map(field => ({
+        [field]: {
+          contains: searchTerm,
+          mode: 'insensitive',
+        },
+      })),
+    });
+  }
+
+  const whereConditons: Prisma.BuildingWhereInput =
+    andConditons.length > 0 ? { AND: andConditons } : {};
+
+  const result = await prisma.building.findMany({
+    skip,
+    take: limit,
+    where: whereConditons,
+    orderBy:
+      options.sortBy && options.sortOrder
+        ? {
+            [options.sortBy]: options.sortOrder,
+          }
+        : { createdAt: 'desc' },
+  });
+
+  const total = await prisma.building.count();
+  return {
+    meta: {
+      page,
+      limit,
+      total,
+    },
+    data: result,
+  };
+};
+
+export const BuildingService = { insertIntoDB, getAllFromDB };
