@@ -104,6 +104,26 @@
             "date": 1692882106722,
             "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-24-08-15-error.log",
             "hash": "31117ae8068a4ec79cfc7e9899651d92625bc8909377e00df61ffbc237f92f0c"
+        },
+        {
+            "date": 1692887820742,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-24-08-16-error.log",
+            "hash": "274e324371b8bf7c10fd560bef0fd1a96a7a03073b54800c87ed4d2c5472829f"
+        },
+        {
+            "date": 1692966865489,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-25-08-14-error.log",
+            "hash": "3f4eb2a567b7a590dc3a1a922fdd7a05c7dc0ac070ad425480025a65948e4571"
+        },
+        {
+            "date": 1693130854744,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-27-08-12-error.log",
+            "hash": "cf0ad3ee3eb7ff631f20ecdbb7f5e8c6d27d1c5182c3f049c08e0633c2bfcd01"
+        },
+        {
+            "date": 1693134783370,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-27-08-13-error.log",
+            "hash": "73e14ab51b6a9232f59e78308876c5af99a3f0e5b70cb465e6da438f2710e6c5"
         }
     ],
     "hashType": "sha256"
