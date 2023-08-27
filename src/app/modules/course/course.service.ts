@@ -1,10 +1,15 @@
 import { Course, CourseFaculty, Prisma } from '@prisma/client';
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
+import { paginationHelpers } from '../../../helpers/paginationHelper';
+import { IGenericResponse } from '../../../interfaces/common';
+import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
 import { asyncForEach } from '../../../shared/utils';
+import { courseSearchableFields } from './course.constants';
 import {
   ICourseCreateData,
+  ICourseFilterRequest,
   IPrerequisiteCourseRequest,
 } from './course.interface';
 
