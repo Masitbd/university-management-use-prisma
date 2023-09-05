@@ -129,6 +129,21 @@
             "date": 1693137613628,
             "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-27-08-14-error.log",
             "hash": "3bd51ebf8fe2e883845740cb7e676a10266778fbf315734036868d8809d3212a"
+        },
+        {
+            "date": 1693256074833,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-28-08-22-error.log",
+            "hash": "698e38ff83d4ddce541302b434c2820ea12704b5986d2a1fb881524dfc17aa27"
+        },
+        {
+            "date": 1693317916205,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-29-08-16-error.log",
+            "hash": "c8031b8a66accec51271aed285ed38b36469ccb37984d57c7b7d1b8faae99f4a"
+        },
+        {
+            "date": 1693330622244,
+            "name": "/home/sarker24/next_level_pheho/prisma/university-management-prisma/logs/winston/errors/phu-2023-29-08-19-error.log",
+            "hash": "d68292261eb31fdf4be9ad1492abb6534a0d7d59172fa224bbf1c28decf2afd7"
         }
     ],
     "hashType": "sha256"

@@ -3,8 +3,10 @@ import { academicDepartmentRoutes } from '../modules/academicDepartment/academic
 import { academicFacultyRoutes } from '../modules/academicFaculty/academicFaculty.route';
 import { AcademicSemesterRouter } from '../modules/academicSemester/academicSemester.routes';
 import { buildingRoutes } from '../modules/building/building.routes';
-import { courseRouter } from '../modules/course/course.routes';
+import { courseRoutes } from '../modules/course/course.routes';
 import { facultyRoutes } from '../modules/faculty/faculty.routes';
+import { offeredCourseRoutes } from '../modules/offeredCourse/offeredCourse.routes';
+import { SemesterRegistrationRoutes } from '../modules/semesterRagistration/semesterRegistratiion.route';
 import { studentRoutes } from '../modules/student/student.routes';
 import { roomRoutes } from './../modules/room/room.routes';
 
@@ -42,7 +44,15 @@ const moduleRoutes = [
   },
   {
     path: '/courses',
-    route: courseRouter,
+    route: courseRoutes,
+  },
+  {
+    path: '/semester-registration',
+    route: SemesterRegistrationRoutes,
+  },
+  {
+    path: '/offered-courses',
+    route: offeredCourseRoutes,
   },
 ];
 
